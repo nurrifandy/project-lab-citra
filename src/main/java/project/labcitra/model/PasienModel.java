@@ -29,6 +29,11 @@ public class PasienModel implements Serializable{
     private String nama;
 
     @NotNull
+    @Size(max = 50)
+    @Column(name = "jenis_kelamin" ,nullable = false)
+    private String jenisKelamin;
+
+    @NotNull
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "tanggal_lahir" ,nullable = false)
     private Date tanggalLahir;
